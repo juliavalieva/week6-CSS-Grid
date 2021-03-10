@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.header {
+    background:rgb(235, 226, 226);
+    text-align: center;
+    padding: 2%;
+    grid-column: 1/4;
+}
+.sidebar {
+    background: rgb(153, 250, 202);
+    text-align: center;
+    padding: 4.5%;
+}
+
+.container_main {
+    background: rgba(243, 239, 183, 0.986);
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70px repeat(2, 1fr);
+    grid-gap: 5px;
+    grid-template-areas:
+    "content-1 content-1"
+    "content-2 content-3"
+    "content-4 content-4";
+}
+
+.content_1 {
+    padding: 4%;
+    grid-area: content-1;
+}
+.content_2 {
+    background: rgb(241, 241, 140);
+    grid-area: content-2;
+}
+.content_3 {
+    background: rgb(241, 241, 140);
+    grid-area: content-3;
+}
+.content_4 {
+    background: rgb(241, 241, 140);
+    padding: 2%;
+    margin: 0 1% 1% 1%;
+    grid-area: content-4;
+}
+.content_2, .content_3 {
+    padding: 3.5%;
+    margin: 0 2% 0 2%;
+}
+
+.container_footer {
+    background:rgb(235, 226, 226);
+    text-align: center;
+    grid-column: 1/4;
+    display:grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.section_1, .section_2, .section_3, .section_4 {
+    background: white;
+    padding: 4.5%;
+    margin: 4% 3.5% 4% 3.5%;
+    
+}
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 3fr 30%;
+    grid-template-rows: 20% 1fr 20%;
+    height: 80vh;
+    width:auto;
+    
+    
+}
+</style>
+</head>
+
+    <body>
+    <div class="container">
+        <header class="header">[Шапка страницы]</header>
+        <main class="container_main">
+            <div class="content_1">[Основная часть]</div>
+            <div class="content_2">[Еще 1]</div>
+            <div class="content_3">[Еще 2]</div>
+            <div class="content_4">[Еще 3]</div>
+        </main>
+        <aside class="sidebar">[Боковая часть]</aside>
+        <footer class="container_footer">
+            <div class="section_1">[Секция футера 1]</div>
+            <div class="section_2">[Секция футера 2]</div>
+            <div class="section_3">[Секция футера 3]</div>
+            <div class="section_4">[Секция футера 4]</div>
+        </footer>
+    </div>
+        </body>
+        </html>
